@@ -11,11 +11,11 @@
     </parent>
 
     <groupId>org.askiesolutions</groupId>
-    <artifactId>recipe-ui-service</artifactId>
+    <artifactId>recipe-ui</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>recipe-ui-service</name>
-    <description>recipe-ui-service</description>
-    <url>https://github.com/Askie01/recipe-ui-service</url>
+    <name>recipe-ui</name>
+    <description>recipe-ui</description>
+    <url>https://github.com/Askie01/recipe-ui</url>
 
     <licenses>
         <license>
@@ -38,9 +38,9 @@
     </developers>
 
     <scm>
-        <connection>git@github.com:Askie01/recipe-ui-service.git</connection>
-        <developerConnection>git@github.com:Askie01/recipe-ui-service.git</developerConnection>
-        <url>https://github.com/Askie01/recipe-ui-service</url>
+        <connection>git@github.com:Askie01/recipe-ui.git</connection>
+        <developerConnection>git@github.com:Askie01/recipe-ui.git</developerConnection>
+        <url>https://github.com/Askie01/recipe-ui</url>
         <tag>HEAD</tag>
     </scm>
 
