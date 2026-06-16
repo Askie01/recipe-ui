@@ -1,0 +1,23 @@
+services:
+
+  recipe-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "askie01/recipe-ui:latest"
+    container_name: "recipe-ui"
+    ports:
+      - "8080:8080"
+    tty: true
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/recipe-ui/actuator/health" ]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - askie-solutions-network
+
+networks:
+  askie-solutions-network:
+    driver: bridge
