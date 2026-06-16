@@ -33,7 +33,6 @@ jobs:
           script: |
             IMAGE="ghcr.io/$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')/recipe-ui:${{ inputs.image_tag || 'latest' }}"
             CONTAINER="${{ vars.CONTAINER_NAME }}"
-            PORT="${{ vars.CONTAINER_PORT }}"
 
             echo "==> Logging in to GHCR"
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ github.repository_owner }}" --password-stdin
@@ -52,7 +51,6 @@ jobs:
               --name "$CONTAINER" \
               --restart unless-stopped \
               --network askie-solutions-network \
-              -p "$PORT":8080 \
               "$IMAGE"
 
             echo "==> Deployment complete"
