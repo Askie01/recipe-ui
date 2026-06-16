@@ -12,8 +12,7 @@
 ## 📖 What is this?
 
 **Recipe UI** is the user-facing web service of the Askie Solutions recipe platform. Built with Spring Boot and
-Thymeleaf, it delivers a clean, server-rendered experience for browsing, managing, and discovering recipes — secured out
-of the box with Spring Security.
+Thymeleaf, it delivers a clean, server-rendered experience for browsing, managing, and discovering recipes.
 
 ---
 
@@ -24,7 +23,6 @@ of the box with Spring Security.
 | ☕ Language       | Java 25                         |
 | 🌱 Framework     | Spring Boot 4.0.6               |
 | 🍃 Templating    | Thymeleaf                       |
-| 🔒 Security      | Spring Security                 |
 | 📊 Observability | Spring Actuator                 |
 | 📦 Build         | Maven (via Maven Wrapper)       |
 | 🐳 Container     | Docker (eclipse-temurin:25-jre) |
@@ -63,7 +61,6 @@ docker compose up
 src/main/
 ├── java/org/askiesolutions/recipeui/
 │   ├── RecipeUiApplication.java       # 🚀 Entry point
-│   ├── security/                      # 🔒 Security configuration
 │   └── view/                          # 🖼️  MVC controllers
 └── resources/
     ├── application.yaml               # ⚙️  App configuration
@@ -87,15 +84,6 @@ Three automated GitHub Actions workflows keep the pipeline running smooth:
 | 🧪 **Test**    | Push / PR to `master`              | Runs unit and integration tests (Java 25 / Temurin)   |
 | 📤 **Publish** | After Test succeeds                | Publishes JAR to GitHub Packages & image to `ghcr.io` |
 | 🚢 **Deploy**  | After Publish succeeds (or manual) | SSH-deploys the new image to the production VPS       |
-
----
-
-## 🔒 Security
-
-- 🌐 Public routes: home page `/`, static assets (CSS, images)
-- 🔐 All other routes require authentication
-- 📝 Form-based login powered by Spring Security
-- 👤 Runs as a non-root `appuser` inside the container
 
 ---
 
