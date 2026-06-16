@@ -10,7 +10,7 @@ services:
       - "8080:8080"
     tty: true
     healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:8080/recipe-ui/actuator/health" ]
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/recipes/actuator/health" ]
       start_period: 10s
       interval: 10s
       timeout: 5s

@@ -104,7 +104,7 @@ Three automated GitHub Actions workflows keep the pipeline running smooth:
 Spring Actuator exposes a health endpoint used by Docker:
 
 ```
-GET /recipe-ui/actuator/health
+GET /recipes/actuator/health
 ```
 
 ---
