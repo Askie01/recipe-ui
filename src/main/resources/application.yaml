@@ -5,9 +5,3 @@ server:
 spring:
   application:
     name: recipe-ui
-
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
