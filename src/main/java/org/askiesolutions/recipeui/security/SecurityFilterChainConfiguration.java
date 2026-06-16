@@ -19,11 +19,11 @@ public class SecurityFilterChainConfiguration {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers("/").permitAll()
-                        .requestMatchers("/css/**").permitAll()
-                        .requestMatchers("/js/**").permitAll()
-                        .requestMatchers("/images/**").permitAll()
-                        .requestMatchers("/favicon.ico").permitAll()
-                        .requestMatchers("/actuator/**").permitAll()
+                        .requestMatchers("/recipes/css/**").permitAll()
+                        .requestMatchers("/recipes/js/**").permitAll()
+                        .requestMatchers("/recipes/images/**").permitAll()
+                        .requestMatchers("/recipes/favicon.ico").permitAll()
+                        .requestMatchers("/recipes/actuator/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .build();
