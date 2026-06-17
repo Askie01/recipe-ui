@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="EN">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title th:text="${title}">My App</title>
-    <link rel="icon" type="image/jpeg" th:href="@{/images/cooking hat.jpg}">
+    <link rel="icon" type="image/jpeg" th:href="@{/images/logo.jpg}">
 
-    <link rel="stylesheet" th:href="@{/css/base.css}">
     <link rel="stylesheet" th:href="@{/css/layout.css}">
     <link rel="stylesheet" th:href="@{/css/components.css}">
 </head>
@@ -19,8 +18,8 @@
 
     <div class="content-wrapper">
 
-        <aside class="sidebar">
-            <div th:replace="~{fragments/sidebar}"></div>
+        <aside class="left-panel">
+            <div th:replace="~{fragments/left-panel}"></div>
         </aside>
 
         <main class="main card">

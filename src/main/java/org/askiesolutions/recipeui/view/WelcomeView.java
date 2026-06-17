@@ -11,7 +11,7 @@ public class WelcomeView {
 
     @GetMapping
     public String welcomePage(Model model) {
-        model.addAttribute("title", "Askie recipes");
+        model.addAttribute("title", "Cooking recipes");
         model.addAttribute("view", "pages/welcome");
         return "layout/base";
     }
